@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('images/cricket_ground.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Main Container */
+.container {
+    /* height: 100vh;  */
+    width: 90%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.7); /* Dark Transparent Background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* List Styles */
+.info-list {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.info-list li {
+    margin: 8px 0;
+}
+
+/* Header */
+.header {
+    background: #007bff;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Blinking "JOIN FAST" */
+.join-fast {
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+    margin: 10px 0;
+    animation: blink .5s infinite alternate;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Countdown Timer */
+.countdown {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.time-label {
+    font-size: 12px;
+    color: #00aaff;
+    font-weight: bold;
+}
+
+/* Neo Gradient Join Button */
+.join-btn {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(-45deg, #ff00ff, #007bff, #00ffaa, #ffcc00);
+    background-size: 300% 300%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 30px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 300px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    animation: gradientMove 3s infinite linear;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hover Effect */
+.join-btn:hover {
+    transform: scale(1.05);
+}
+
+
+.join-btn span {
+    margin-left: 5px;
+}
+
+/* Neo Gradient WhatsApp Button */
+.whatsapp-btn {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(-45deg, #25d366, #128C7E, #075E54, #34D399);
+    background-size: 300% 300%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 30px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 300px;
+    box-shadow: 0px 5px 15px rgba(0, 255, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    animation: whatsappGradientMove 3s infinite linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and icon */
+}
+
+/* Gradient Animation */
+@keyframes whatsappGradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* WhatsApp Icon */
+.whatsapp-btn i {
+    font-size: 25px;
+    color: #1dbe0e; /* Ensuring visibility */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Profile Image */
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    /* margin: 15px 0; */
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .title {
+        font-size: 22px;
+    }
+    .subtitle {
+        font-size: 18px;
+    }
+    .countdown {
+        font-size: 20px;
+    }
+    .join-btn, .whatsapp-btn{
+        font-size: 18px;
+        padding: 10px;
+    }
+}
